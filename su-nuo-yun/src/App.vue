@@ -9,12 +9,12 @@
             </router-link>
           </div>
           <div class="nav" id="menu">
-            <router-link to="/">首页</router-link>
+            <a href="/#slide">首页</a>
             <router-link to="/">产品中心</router-link>
             <router-link to="/about">云服务器</router-link>
             <router-link to="/">服务器租用</router-link>
             <router-link to="/">平台与技术</router-link>
-            <router-link to="/">联系我们</router-link>
+            <a href="/#about">联系我们</a>
           </div>
         </div>
 
@@ -28,7 +28,7 @@
     <router-view class="mt4"/>
   </div>
 </template>
-<style lang="stylus">
+<style lang="stylus" scoped>
   html
     width:100%
     height:100%

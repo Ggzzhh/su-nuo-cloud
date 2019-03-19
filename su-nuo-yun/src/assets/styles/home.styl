@@ -1,0 +1,297 @@
+html
+  width:100%
+  height:100%
+  body
+    font-family: '华文细黑'
+    background: url("../img/1.jpg") repeat-y
+    background-size: 100%
+    font-size: 1rem
+
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+
+.section p {
+  color: #888;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+.full-d {
+  width: 100%;
+  height: 100%;
+}
+
+.content-d {
+  width: 100%;
+  height: 60%;
+}
+
+.content {
+  width: 50%;
+  height: 100%;
+}
+
+.flex-middle {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.b-hr {
+  padding-bottom: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.b-hr:before {
+  content: "";
+  width: 76px;
+  height: 4px;
+  background: #4fa1ff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.b-hr2 {
+  padding-bottom: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.b-hr2:before {
+  content: "";
+  width: 76px;
+  height: 4px;
+  background: #4fa1ff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.c-img {
+  width: 80%;
+  height: 70%;
+}
+
+.c-img img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.pt-4 {
+  padding-top: 4rem;
+}
+
+.pt-7 {
+  padding-top: 7rem;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pt-05 {
+  padding-top: .5rem;
+}
+
+
+.pic {
+  width: 80%;
+  background-color: #fff;
+}
+
+.d-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-left > div{
+  width: 80%;
+}
+
+.blue {
+  color: #4fa1ff;
+}
+
+.choice-me {
+  width: 65%;
+  height: 45%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choice-text > p {
+  color: #8d8d8d;
+  text-indent: 2rem;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.h-img {
+  background: url("../img/logo06.png") no-repeat;
+  background-size: 100%;
+  min-width: 150px;
+  min-height: 80px;
+}
+
+.h-img:hover {
+  background: url("../img/logo6.png") no-repeat;
+  background-size: 100%;
+  min-width: 150px;
+  min-height: 80px;
+}
+
+.none {
+  opacity: 0;
+}
+
+.about-us {
+  width: 100%;
+  height: 95%;
+}
+
+.foot-left {
+
+  padding-left: 6rem;
+  padding-right: 3rem;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  text-align: left;
+}
+
+.foot-right {
+  padding-left: 3rem;
+  padding-right: 6rem;
+  padding-top: 3rem;
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #939393;
+}
+
+.topNav {
+  width: 100%;
+  height: 4rem;
+  margin: 0;
+  z-index: 100;
+  overflow: visible;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px 1px rgba(172, 172, 172, 0.4);
+}
+
+.navWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 5rem;
+}
+
+.nav , .logo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #8d8d8d;
+  font-weight: bold;
+}
+
+.could-section{
+  width: 80%;
+  height: 100%;
+}
+
+.could-section>div {
+  width: 100%;
+
+  display: flex;
+}
+
+.could-price {
+  background-color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: transform 1s;
+}
+
+.could-price a:nth-child(1) {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.could-price a .h3 {
+  margin: 1rem 0;
+  white-space: nowrap;
+  font-size: 1.4rem;
+}
+
+.price span {
+  font-size: 2.5rem;
+  color: green;
+  font-weight: 800;
+}
+
+.could-detail {
+  color: white;
+  opacity: 0;
+  margin-top: 1rem;
+  transition: transform .5s;
+}
+
+.could-price:hover {
+  box-shadow: 0 15px 20px rgba(0,0,0,.05);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.could-price a {
+  transition: opacity 1s;
+}
