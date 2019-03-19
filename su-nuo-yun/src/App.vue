@@ -4,14 +4,17 @@
       <div class="navWrapper">
         <div class="navs">
           <div class="logo">
-            <img alt="Vue logo" src="./assets/logo.png">
+            <router-link to="/">
+              <img alt="Vue logo" src="./assets/logo.png">
+            </router-link>
           </div>
-          <div class="nav">
-            <a href="#">产品中心</a>
-            <a href="#">云服务器</a>
-            <a href="#">服务器租用</a>
-            <a href="#">平台与技术</a>
-            <a href="#">关于</a>
+          <div class="nav" id="menu">
+            <router-link to="/">首页</router-link>
+            <router-link to="/">产品中心</router-link>
+            <router-link to="/about">云服务器</router-link>
+            <router-link to="/">服务器租用</router-link>
+            <router-link to="/">平台与技术</router-link>
+            <router-link to="/">联系我们</router-link>
           </div>
         </div>
 
@@ -22,7 +25,7 @@
       <!--<router-link to="/">Home</router-link> |-->
       <!--<router-link to="/about">About</router-link>-->
     </div>
-    <router-view/>
+    <router-view class="mt4"/>
   </div>
 </template>
 <style lang="stylus">
@@ -40,38 +43,50 @@
     -moz-osx-font-smoothing grayscale
     text-align center
     color #2c3e50
+  .mt4
+    margin-top 4rem
 
   #nav
-    width: 100%;
-    height: 4rem;
-    margin: 0;
-    z-index: 100;
-    overflow: visible;
-    position: fixed;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 1px 1px 1px 1px rgba(172, 172, 172, 0.4);
+    width: 100%
+    height: 4rem
+    margin: 0
+    z-index: 100
+    overflow: visible
+    position: fixed
+    top 0
+    left 0
+    right 0
+    background-color: rgb(255, 255, 255)
+    box-shadow: 1px 1px 1px 1px rgba(172, 172, 172, 0.4)
     .navWrapper
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: space-between
       .navs
-        display: flex;
-        justify-content: space-between;
+        display: flex
+        justify-content: space-between
         .logo
-          margin-left: 5rem;
+          margin-left: 5rem
           display flex
           align-items center
           img
             width 30px
             height 30px
       .nav
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        display: flex
+        justify-content: space-around
+        align-items: center
         a
-          margin-left: 2rem;
-          text-decoration: none;
-          color: #8d8d8d;
-          font-weight: bold;
+          margin-left: 2rem
+          text-decoration: none
+          color: #8d8d8d
+          font-weight: bold
+  .flex-middle
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
 </style>
