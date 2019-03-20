@@ -10,8 +10,9 @@
           </div>
           <div class="nav" id="menu">
             <a href="/#slide">首页</a>
-            <router-link to="/">产品中心</router-link>
+            <a href="/cloud-host">云虚拟主机</a>
             <router-link to="/about">云服务器</router-link>
+            <router-link to="/">数据中心</router-link>
             <router-link to="/">服务器租用</router-link>
             <router-link to="/">平台与技术</router-link>
             <a href="/#about">联系我们</a>
@@ -82,6 +83,8 @@
           text-decoration: none
           color: #8d8d8d
           font-weight: bold
+          &:hover
+            color #4fa1ff
   .flex-middle
     display: flex
     flex-wrap: wrap

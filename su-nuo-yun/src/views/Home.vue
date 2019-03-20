@@ -60,7 +60,6 @@
                   </p>
                 </div>
 
-
               </div>
             </div>
             <div class="col-md-6 col-sm-12">
@@ -107,7 +106,6 @@
                     远拓网络科技，创建于中国，由资深云计算专家和行业顶尖运维工程师组建精英团队，专注企业级云计算服务、数据中心基础业务的深度开发与运营。依托郑州、宿迁、惠州、福州、香港、韩国、美国等数据中心集群资源，数掘科技基于XenServer®架构构建的云计算服务平台，以SSD级硬件设备确保高性能I/O，利用Ceph分布式存储实现自动冗余保障高可用，提供实时快照备份/回滚、私有网络、热迁移等功能，帮助企业/开发者构建和运维更加高效、可靠、敏捷的商务级IT部署解决方案，有效降低总体拥有成本(TCO)和运维支出。
                   </p>
                 </div>
-
 
               </div>
             </div>
@@ -192,14 +190,30 @@
                 <h2>ABOUT US</h2>
                 <p>
                   远拓网络科技，创建于中国，由资深云计算专家和行业顶尖运维工程师组建精英团队，专注企业级云计算服务、数据中心基础业务的深度开发与运营。依托郑州、宿迁、惠州、福州、香港、韩国、美国等数据中心集群资源，数掘科技基于XenServer®架构构建的云计算服务平台，以SSD级硬件设备确保高性能I/O，利用Ceph分布式存储实现自动冗余保障高可用，提供实时快照备份/回滚、私有网络、热迁移等功能，帮助企业/开发者构建和运维更加高效、可靠、敏捷的商务级IT部署解决方案，有效降低总体拥有成本(TCO)和运维支出。
-
                 </p>
 
-                <div style="padding-top: 3rem">
+                <div>
                   <h2>CONTACT US</h2>
-                  <h3>
+                  <h3 style="padding-left: 2rem; color: #8d8d8d; font-weight: 900">
                     1 3 1 1 2 3 4 5 6 7
                   </h3>
+                </div>
+
+                <div class="contact">
+                  <div class="icon">
+                    <div class="icon-img flex-middle">
+                      <img src="../assets/img/x.svg" alt="">
+                    </div>
+                    <div class="alt flex-middle">
+                      微 信 公 众 号
+                    </div>
+                  </div>
+                  <div class="icon">
+
+                  </div>
+                  <div class="icon">
+
+                  </div>
                 </div>
               </div>
             </div>
@@ -209,7 +223,6 @@
                 <div style="padding-top: 1rem">
                   <p>
                     地址： 宁夏红寺堡
-
                   </p>
                 </div>
               </div>
@@ -227,120 +240,136 @@
 </template>
 
 <script>
-  // @ is an alias to /src
-  import CouldView from '@/components/CouldView.vue'
-  import HelloWorld from '@/components/HelloWorld.vue'
+// @ is an alias to /src
+import CouldView from '@/components/CouldView.vue'
+// import $ from 'jquery'
 
-  export default {
-    name: 'home',
-    components: {
-      CouldView,
-      HelloWorld
-    },
-    data () {
-      return {
-        items: [
-          {
-            price: 249,
-            bandwidth: 10,
-            defense: 60,
-            core: 4,
-            capacity: 4
-          },
-          {
-            price: 600,
-            bandwidth: 50,
-            defense: 100,
-            core: 16,
-            capacity: 16
-          },
-          {
-            price: 900,
-            bandwidth: 5,
-            defense: 0,
-            core: 8,
-            capacity: 8
-          },
-          {
-            price: 1500,
-            bandwidth: 5,
-            defense: 15,
-            core: 8,
-            capacity: 8
-          },
-        ],
-        show: false
-      }
-    },
-    mounted() {
-      let vue = this;
-      $('#fullpage').fullpage({
-        'verticalCentered': false,
-        'css3': true,
-        'sectionsColor': ['#fff', '#f3f3f3', '#fff', 'rgba(1,1,1,0.3)', '#f3f3f3', '#fff', '#212121'],
-        anchors: ['slide', 'server', 'introduce', 'why-me ', 'advantage', 'cooperation', 'about'],
-        'navigation': false,
-        'navigationPosition': 'right',
-        // 'navigationColor': '#ff726f',
-        'scrollingSpeed': 1200,
-        // responsiveWidth: 1024,
-        // responsiveHeight: 0,
-        controlArrows: false,
-        // controlArrowColor: 'rgba(1,1,1,0.2)',
-        resetSliders: true,
 
-        afterLoad: function(anchor, index){
-          // section 加载完毕后
-          if (index === 1){
-            // var count = 1;
-            setTimeout(function () {
-              $.fn.fullpage.moveSlideRight();
-            }, 2800);
-          }
-
-          if (index === 2) {
-            vue.show = true;
-          }
-
-          if (index === 4){
-            $('.choice-me').removeClass().addClass('choice-me animated lightSpeedIn')
-          }
-
-          if (index === 7){
-            $('.foot-left').removeClass().addClass('foot-left animated slideInLeft');
-            $('.foot-right').removeClass().addClass('foot-right animated slideInRight')
-          }
-
+export default {
+  name: 'home',
+  components: {
+    CouldView
+  },
+  data () {
+    return {
+      items: [
+        {
+          price: 249,
+          bandwidth: 10,
+          defense: 60,
+          core: 4,
+          capacity: 4
         },
-
-        onLeave: function(index, nextIndex, direction){
-
-          if (index === 2) {
-            vue.show = false;
-          }
-
-          if (index === 4){
-            $('.choice-me').removeClass().addClass('choice-me animated lightSpeedOut')
-          }
-
-          if (index === 7){
-            $('.foot-left').removeClass('slideInLeft').addClass('slideOutLeft');
-            $('.foot-right').removeClass('slideInRight').addClass('slideOutRight')
-          }
+        {
+          price: 600,
+          bandwidth: 50,
+          defense: 100,
+          core: 16,
+          capacity: 16
         },
-        afterSlideLoad: function (anchorLink, index, slideIndex, direction) {
-          if (index === 1){
-            // var count = 1;
-            setTimeout(function () {
-              // count ++;
-              clearTimeout();
-              // console.log(count);
-              $.fn.fullpage.moveSlideRight();
-            }, 2800);
-          }
+        {
+          price: 900,
+          bandwidth: 5,
+          defense: 0,
+          core: 8,
+          capacity: 8
+        },
+        {
+          price: 1500,
+          bandwidth: 5,
+          defense: 15,
+          core: 8,
+          capacity: 8
         }
-      })
+      ],
+      show: false
     }
+  },
+  mounted () {
+    let vue = this
+    $('#fullpage').fullpage({
+      'verticalCentered': false,
+      'css3': true,
+      'sectionsColor': ['#fff', '#f3f3f3', '#fff', 'rgba(1,1,1,0.3)', '#f3f3f3', '#fff', '#212121'],
+      anchors: ['slide', 'server', 'introduce', 'why-me ', 'advantage', 'cooperation', 'about'],
+      'navigation': false,
+      'navigationPosition': 'right',
+      // 'navigationColor': '#ff726f',
+      'scrollingSpeed': 1200,
+      // responsiveWidth: 1024,
+      // responsiveHeight: 0,
+      controlArrows: false,
+      // controlArrowColor: 'rgba(1,1,1,0.2)',
+      resetSliders: true,
+
+      afterLoad: function (anchor, index) {
+        // section 加载完毕后
+        if (index === 1) {
+          // var count = 1;
+          setTimeout(function () {
+            $.fn.fullpage.moveSlideRight()
+          }, 2800)
+        }
+
+        if (index === 2) {
+          vue.show = true
+        }
+
+        if (index === 4) {
+          $('.choice-me').removeClass().addClass('choice-me animated lightSpeedIn')
+        }
+
+        if (index === 7) {
+          $('.foot-left').removeClass().addClass('foot-left animated slideInLeft')
+          $('.foot-right').removeClass().addClass('foot-right animated slideInRight')
+        }
+      },
+
+      onLeave: function (index, nextIndex, direction) {
+        if (index === 2) {
+          vue.show = false
+        }
+
+        if (index === 4) {
+          $('.choice-me').removeClass().addClass('choice-me animated lightSpeedOut')
+        }
+
+        if (index === 7) {
+          $('.foot-left').removeClass('slideInLeft').addClass('slideOutLeft')
+          $('.foot-right').removeClass('slideInRight').addClass('slideOutRight')
+        }
+      },
+      afterSlideLoad: function (anchorLink, index, slideIndex, direction) {
+        if (index === 1) {
+          // var count = 1;
+          setTimeout(function () {
+            // count ++;
+            clearTimeout()
+            // console.log(count);
+            $.fn.fullpage.moveSlideRight()
+          }, 2800)
+        }
+      }
+    })
   }
+}
 </script>
 
+
+<style lang="stylus" scoped>
+  .contact
+    display flex
+    flex-direction row
+    justify-content space-between
+    .icon
+      color #8d8d8d
+      font-weight 700
+      display flex
+      flex-direction column
+      width 30%
+      font-size 0.8rem
+      img
+        width 75%
+        height 75%
+        margin-bottom 0.3rem
+</style>

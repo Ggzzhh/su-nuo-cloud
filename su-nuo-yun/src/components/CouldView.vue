@@ -22,56 +22,56 @@
 </template>
 
 <script>
-  export default {
-    name: "CouldView",
-    props: {
-      price: {
-        type: Number,
-        default: 0
-      },
-      bandwidth: {
-        type: Number,
-        default: 0
-      },
-      defense: {
-        type: Number,
-        default: 0
-      },
-      core: {
-        type: Number,
-        default: 0
-      },
-      capacity: {
-        type: Number,
-        default: 0
-      },
-      link: {
-        type: String,
-        default: '#'
-      },
-      detail_link: {
-        type: String,
-        default: '#'
-      },
-      title: {
-        type: String,
-        default: '服务器'
-      }
+export default {
+  name: 'CouldView',
+  props: {
+    price: {
+      type: Number,
+      default: 0
     },
-
-    data: function () {
-      return {
-        opacity1: 0
-      }
+    bandwidth: {
+      type: Number,
+      default: 0
     },
+    defense: {
+      type: Number,
+      default: 0
+    },
+    core: {
+      type: Number,
+      default: 0
+    },
+    capacity: {
+      type: Number,
+      default: 0
+    },
+    link: {
+      type: String,
+      default: '#'
+    },
+    detail_link: {
+      type: String,
+      default: '#'
+    },
+    title: {
+      type: String,
+      default: '服务器'
+    }
+  },
 
-    methods: {
-      enter: function (event) {
-        this.opacity1 = 1
-      },
-      leave: function (event) {
-        this.opacity1 = 0
-      }
+  data: function () {
+    return {
+      opacity1: 0
+    }
+  },
+
+  methods: {
+    enter: function (event) {
+      this.opacity1 = 1
+    },
+    leave: function (event) {
+      this.opacity1 = 0
     }
   }
+}
 </script>
