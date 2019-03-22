@@ -245,7 +245,6 @@ import CouldView from '@/components/CouldView.vue'
 import $ from 'jquery'
 import fullpage from 'fullpage.js'
 
-
 export default {
   name: 'home',
   components: {
@@ -355,7 +354,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="stylus" scoped>
   .contact

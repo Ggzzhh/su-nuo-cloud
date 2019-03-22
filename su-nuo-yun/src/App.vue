@@ -10,7 +10,7 @@
           </div>
           <div class="nav" id="menu">
             <a href="/#slide">首页</a>
-            <a href="/cloud-host">云虚拟主机</a>
+            <a href="/cloud-host/GD">云虚拟主机</a>
             <router-link to="/about">云服务器</router-link>
             <router-link to="/">数据中心</router-link>
             <router-link to="/">服务器租用</router-link>

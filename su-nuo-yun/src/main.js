@@ -5,7 +5,8 @@ import store from './store'
 
 import './assets/styles/home.styl'
 import './assets/styles/css3patterns.styl'
-import animate from 'animate.css'
+import 'animate.css'
+import 'hover.css'
 
 Vue.config.productionTip = false
 
