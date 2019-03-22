@@ -14,7 +14,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/cloud-host',
+      path: '/cloud-host/:line',
       name: 'cloud-host',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route

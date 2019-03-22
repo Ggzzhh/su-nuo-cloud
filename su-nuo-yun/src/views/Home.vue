@@ -184,7 +184,7 @@
       <!--第七页-->
       <div class="section">
         <div class="full-d pt-5">
-          <div class="row about-us">
+          <div class="row about-us flex-middle">
             <div class="col-md-6 pt-4">
               <div class="foot-left none">
                 <h2>ABOUT US</h2>
@@ -242,7 +242,8 @@
 <script>
 // @ is an alias to /src
 import CouldView from '@/components/CouldView.vue'
-// import $ from 'jquery'
+import $ from 'jquery'
+import fullpage from 'fullpage.js'
 
 
 export default {
