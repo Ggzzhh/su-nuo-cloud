@@ -27,10 +27,10 @@
 </template>
 
 <script>
-export default {
-  name: 'PriceModel',
-  props: ['price']
-}
+  export default {
+    name: 'PriceModel',
+    props: ['price']
+  }
 </script>
 
 <style lang="stylus" scoped>
@@ -49,9 +49,11 @@ export default {
     .price-model-content
       ul
         b
-         color #3871b2
+          color #4993ea
+          font-weight 600
       /*text-align center*/
-      color #8d8d8d
+      color #566d78
+      font-weight 500
       font-size 1rem
     &:hover
       box-shadow 0 0 10px 0 rgba(56, 113, 175, 0.5)

@@ -47,6 +47,7 @@
           </div>
         </div>
       </div>
+      <!--第三页-->
       <div class="section">
         <div class="flex-middle full-d">
           <div class="row content-d">
@@ -63,7 +64,7 @@
               </div>
             </div>
             <div class="col-md-6 col-sm-12">
-              <div class="c-img p-4">
+              <div class="c-img p-4 hvr-float-shadow">
                 <img src="../assets/img/2.png" alt="" >
               </div>
             </div>

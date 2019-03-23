@@ -6,6 +6,7 @@
       describe="基于SAS卓越性能构建的 PHP专用主机，搭配Kangle面板。从单个网站最优价格，到多个站点最复杂的运算和最繁重的流量需求，均可满足"
       styleModel="default"
     />
+
     <div class="bg-light">
       <div class="flex-center">
         <div class="content-title">
@@ -17,6 +18,7 @@
         </div>
       </div>
     </div>
+
     <div class="bg-gray price-wrapper flex-middle">
       <div class="price-tag-wrapper">
         <div class="price-tag hvr-float-shadow">
@@ -154,11 +156,12 @@
     </div>
 
     <div class="row contents bg-gray" id="content3" style="padding-top:50px;">
-      <h3 class="vice-title text-center">开发支持</h3>
-      <div class="text-border"></div>
+
       <section class="section">
         <div class="container">
           <div class="row">
+            <h3 class="vice-title text-center">开发支持</h3>
+            <div class="text-border"></div>
             <div class="">
               <table class="table table-bordered">
                 <thead>
@@ -206,6 +209,104 @@
           </div>
         </div>
       </section>
+    </div>
+
+    <div class="row contents bg-light" id="content4">
+      <section class="section">
+        <div class="row">
+          <h3 class="vice-title text-center">数据中心</h3>
+          <div class="text-border"></div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th class="theme" width="20%"><div style="text-align:left;"></div></th>
+                  <th class="theme"><div>国内</div></th>
+                  <th class="theme"><div>香港</div></th>
+                  <th class="theme"><div>韩国</div></th>
+                  <th class="theme"><div>美国</div></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><div class="feature">机房</div></td>
+                  <td>惠州/宿迁</td>
+                  <td>香港沙田</td>
+                  <td>韩国KT</td>
+                  <td>美国洛杉矶</td>
+                </tr>
+                <tr>
+                  <td><div class="feature">网络</div></td>
+                  <td>电信联通互联互通线路</td>
+                  <td>电信CN2直连，BGP国际多线</td>
+                  <td>BGP国际多线</td>
+                  <td>BGP国际多线</td>
+                </tr>
+                <tr>
+                  <td><div class="feature">带宽</div></td>
+                  <td>1000Mbps共享带宽</td>
+                  <td>1000Mbps共享带宽</td>
+                  <td>1000Mbps共享带宽</td>
+                  <td>1000Mbps共享带宽</td>
+                </tr>
+                <tr>
+                  <td><div class="feature">安全</div></td>
+                  <td>安全盾+金盾</td>
+                  <td>安全盾+金盾</td>
+                  <td>安全盾+金盾</td>
+                  <td>安全盾+金盾</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+
+    <div class="row contents bg-gray" id="content5">
+      <section class="agent-counting section sjk-section">
+        <div class="container">
+          <div class="row">
+            <h3 class="vice-title text-center">数据库</h3>
+            <div class="text-border"></div>
+          </div>
+          <div class="row">
+            <div class="">
+              <table class="table table-bordered">
+                <thead>
+                </thead>
+                <tbody>
+                <tr>
+                  <td width="20%"><div class="feature">数据库类型</div></td>
+                  <td>PHP5.2-PHP7.1可选，通过自助切换PHP版本，可实现“PHP+MySQL”任意版本组合</td>
+                </tr>
+                <tr>
+                  <td><div class="feature">管理</div></td>
+                  <td>用户拥有phpMyAdmin最高管理权限，支持编辑/删除/清空/备份导出和导入等操作</td>
+                </tr>
+                <tr>
+                  <td><div class="feature">文件目录</div></td>
+                  <td>不限文件目录数量。总文件大小不超出磁盘容量即可</td>
+                </tr>
+                <tr>
+                  <td><div class="feature">备份</div></td>
+                  <td>通过控制面板中MySQL“下载”功能，可将数据库压缩包下载至本地保存</td>
+                </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </div>
 
   </div>
@@ -302,6 +403,8 @@
 
 <style lang="stylus" scoped>
   #cloud-host
+    .bg-light
+      background-color white!important
     /*color white*/
     .content-title
       padding-top 5rem
