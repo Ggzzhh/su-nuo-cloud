@@ -183,7 +183,7 @@
       </div>
       <!--第七页-->
       <div class="section">
-        <div class="full-d pt-5">
+        <div class="full-d ">
           <div class="row about-us flex-middle">
             <div class="col-md-6 pt-4">
               <div class="foot-left none">
@@ -227,10 +227,11 @@
                 </div>
               </div>
             </div>
+            <div class="footer">
+              Copyright©2001-2017 All rights reserved.    宁夏远拓网络科技 版权所有    备案号0000000
+            </div>
           </div>
-          <div class="footer">
-            Copyright©2001-2017 All rights reserved.    宁夏远拓网络科技 版权所有    备案号0000000
-          </div>
+
         </div>
 
       </div>
@@ -243,7 +244,7 @@
 // @ is an alias to /src
 import CouldView from '@/components/CouldView.vue'
 import $ from 'jquery'
-import fullpage from 'fullpage.js'
+import 'fullpage.js'
 
 export default {
   name: 'home',
@@ -295,7 +296,7 @@ export default {
       'navigation': false,
       'navigationPosition': 'right',
       // 'navigationColor': '#ff726f',
-      'scrollingSpeed': 1200,
+      'scrollingSpeed': 800,
       // responsiveWidth: 1024,
       // responsiveHeight: 0,
       controlArrows: false,

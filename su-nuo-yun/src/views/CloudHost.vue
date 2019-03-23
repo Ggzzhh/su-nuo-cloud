@@ -69,9 +69,6 @@
         </div>
       </div>
     </div>
-    <div class="bg-light" style="min-height: 300px">
-
-    </div>
 
     <des
       title="轻击鼠标"
@@ -80,6 +77,137 @@
 如果您有特殊的程序需求，可提交服务单获取“程序免费安装”服务。"
       styleModel="transparent"
     />
+
+    <div class="bg-light flex-column flex-middle section-serve" style="min-height: 300px">
+      <div><h4 class="blue">专业托管意味着工作更简单</h4></div>
+      <div><h2 class="b-hr2">您已获得7x24小时金牌服务</h2></div>
+      <div class="serve-data">
+        <div class="hvr-bob" v-for="data in serveDates" :key="data.name">
+          <img :src="data.imgSrc" :alt="data.name" />
+          <h5>{{data.name}}</h5>
+          <p class="intro">{{data.intro}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row flex-middle bg-gray" id="content1">
+      <section class="section ">
+        <div class="container">
+          <div class="row">
+            <h3 class="vice-title text-center">架构</h3>
+            <div class="text-border"></div>
+          </div>
+          <div class="row">
+            <div class="">
+              <table class="table table-bordered">
+                <thead>
+                </thead>
+                <tbody>
+                <tr>
+                  <td width="20%"><div class="feature">操作系统</div></td>
+                  <td><div class="zq">Linux+Apache</div></td>
+                  <td width="20%">控制面板</td>
+                  <td><div class="zq">Kangle</div></td>
+                </tr>
+                <tr>
+                  <td><div class="feature">PHP版本</div></td>
+                  <td><div class="zq">PHP 5.2/5.3/5.4/5.5/5.6/7.0/7.1</div></td>
+                  <td>Apache版本</td>
+                  <td><div class="zq">2.2/2.4</div></td>
+                </tr>
+                <tr>
+                  <td><div class="feature">MySQL数据库版本</div></td>
+                  <td><div class="zq">MySQL 5.6.37</div></td>
+                  <td>phpMyAdmin版本</td>
+                  <td><div class="zq">4.4.15.8</div></td>
+                </tr>
+                <tr>
+                  <td><div class="feature">IP配置</div></td>
+                  <td colspan="3"><div class="zq">用户共享1个IP地址。每个IP地址下用户数量限制在50名以内</div></td>
+                </tr>
+                <tr>
+                  <td><div class="feature">硬件</div></td>
+                  <td colspan="3"><div class="zq">Dell™服务器、Intel® Xeon® 处理器、Dell™ SAS企业级硬盘</div></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="row flex-middle bg-light" id="content2">
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <h3 class="vice-title text-center">程序支持</h3>
+            <div class="text-border"></div>
+          </div>
+          <div class="row flex-row">
+            <div class="support col-sm-3 hvr-wobble-to-top-right" v-for="support in supports" >
+              <img :src="support" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="row contents bg-gray" id="content3" style="padding-top:50px;">
+      <h3 class="vice-title text-center">开发支持</h3>
+      <div class="text-border"></div>
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <div class="">
+              <table class="table table-bordered">
+                <thead>
+                </thead>
+                <tbody>
+                <tr>
+                  <td width="20%"><div class="feature">PHP 5.2/5.3/5.4/5.5/5.6/7.0/7.1</div></td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                  <td width="20%">ionCube</td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                </tr>
+                <tr>
+                  <td><div class="feature">HTML</div></td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                  <td>WAP</td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                </tr>
+                <tr>
+                  <td><div class="feature">XML</div></td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                  <td>Zend Guard&amp; Zend Optimizer</td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                </tr>
+                <tr>
+                  <td><div class="feature">自定义.htaccess</div></td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                  <td>PDO</td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                </tr>
+                <tr>
+                  <td><div class="feature">自定义php.ini</div></td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                  <td>MySQL</td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+                </tr>
+                <tr>
+                  <td><div class="feature">HTTPS 加密</div></td>
+                  <td><div class="zq"><img src='../assets/img/check.png' /></div></td>
+
+                </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
   </div>
 </template>
 
@@ -102,7 +230,71 @@
     },
     data () {
       return {
-        defaultPrice
+        defaultPrice,
+        serveDates: [
+          {
+            // 图片必须使用require来加载，否则会当成字符串处理
+            imgSrc: require('../assets/img/icon/linux_icon1.svg'),
+            name:'BGP自愈网络',
+            intro:'超融合BGP网络，实时监控网络健康状态，秒级切换最佳路由。'
+          },
+          {
+            // 图片必须使用require来加载，否则会当成字符串处理
+            imgSrc: require('../assets/img/icon/linux_icon2.svg'),
+            name:'集成缓存加速您的网站',
+            intro:'通过自主开发的Web Caching配置和多节点支撑，自动加速。'
+          },
+          {
+            // 图片必须使用require来加载，否则会当成字符串处理
+            imgSrc: require('../assets/img/icon/linux_icon3.svg'),
+            name:'免费搬家服务',
+            intro:'订购主机后，您只需将备份数据交给我们，剩下的工作由我们完成。'
+          },
+          {
+            // 图片必须使用require来加载，否则会当成字符串处理
+            imgSrc: require('../assets/img/icon/linux_icon4.svg'),
+            name:'不用等待，马上就好',
+            intro:'海外节点无需备案，开通即发布网站。抢占市场的良机不再错过。'
+          },
+          {
+            // 图片必须使用require来加载，否则会当成字符串处理
+            imgSrc: require('../assets/img/icon/linux_icon5.svg'),
+            name:'专业托管意味着工作更简单',
+            intro:'我们负责网络、监控及其他工作，您可以省出精力专心处理业务。'
+          },
+          {
+            // 图片必须使用require来加载，否则会当成字符串处理
+            imgSrc: require('../assets/img/icon/linux_icon6.svg'),
+            name:'选择您的专属客服',
+            intro:'专属客服与您无缝对接，全程跟进。随时随地，您都能与她取得联系。'
+          },
+          {
+            // 图片必须使用require来加载，否则会当成字符串处理
+            imgSrc: require('../assets/img/icon/linux_icon7.svg'),
+            name:'3天退款保证',
+            intro:'购买3天内，使用不满意可随时办理按天退款，且无任何手续费。'
+          },
+          {
+            // 图片必须使用require来加载，否则会当成字符串处理
+            imgSrc: require('../assets/img/icon/linux_icon8.svg'),
+            name:'按年支付',
+            intro:'避免因产品逾期造成停机和网站业务中断。支持支付宝/微信/财付通支付。'
+          },
+        ],
+        supports: [
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png'),
+          require('../assets/img/icon/logo7.png')
+        ]
       }
     }
   }
@@ -139,4 +331,52 @@
             margin 0.5rem 0
       *
         cursor pointer
+    .section-serve
+      padding 5rem
+    .serve-data
+      width 80%
+      display flex
+      justify-content space-between
+      flex-flow wrap
+      div
+        width 25%
+        padding 0 1rem
+        .intro
+          font-size 0.8rem
+          text-align left
+        img
+          width 4rem
+          height 4rem
+        h5
+          font-size 1.1rem
+          margin-top 1.2rem
+          margin-bottom 0.6rem
+    .section
+      padding 5rem
+      width 100%
+      .text-border
+        height 0
+        width 50px
+        border-top 1px solid rgba(33,33,33,.2)
+        margin 0 0 2rem 0
+    .container
+      width 100%!important
+    .row
+    .content
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+      div
+        width 100%
+      .zq
+        img
+          width 2.3rem
+      .support
+        background-color white
+        padding 1rem
+        img
+          width 10rems
+    td
+      padding 1rem
 </style>
