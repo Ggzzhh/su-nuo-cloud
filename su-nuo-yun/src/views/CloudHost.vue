@@ -1,5 +1,8 @@
 <template>
   <div id="cloud-host">
+    <div class="aside animated" :class="asideAnimate" v-if="handleTop">
+      <fixed-aside :navs="asideNavs"></fixed-aside>
+    </div>
     <des
       title="云虚拟主机"
       subTitle=""
@@ -72,6 +75,7 @@
       </div>
     </div>
 
+
     <des
       title="轻击鼠标"
       subTitle="即刻创建网站"
@@ -92,7 +96,8 @@
       </div>
     </div>
 
-    <div class="row flex-middle bg-gray" id="content1">
+
+    <div class="contents bg-gray" id="content1">
       <section class="section ">
         <div class="container">
           <div class="row">
@@ -139,7 +144,7 @@
       </section>
     </div>
 
-    <div class="row flex-middle bg-light" id="content2">
+    <div class="contents bg-light" id="content2">
       <section class="section">
         <div class="container">
           <div class="row">
@@ -155,8 +160,7 @@
       </section>
     </div>
 
-    <div class="row contents bg-gray" id="content3" style="padding-top:50px;">
-
+    <div class="contents bg-gray" id="content3" >
       <section class="section">
         <div class="container">
           <div class="row">
@@ -211,7 +215,7 @@
       </section>
     </div>
 
-    <div class="row contents bg-light" id="content4">
+    <div class="contents bg-light" id="content4">
       <section class="section">
         <div class="row">
           <h3 class="vice-title text-center">数据中心</h3>
@@ -269,7 +273,7 @@
 
     </div>
 
-    <div class="row contents bg-gray" id="content5">
+    <div class="contents bg-gray" id="content5">
       <section class="agent-counting section sjk-section">
         <div class="container">
           <div class="row">
@@ -309,12 +313,71 @@
 
     </div>
 
+    <div class="contents bg-light" id="content6">
+      <section class="section">
+        <div class="row">
+          <h3 class="vice-title text-center">常见问题</h3>
+          <div class="text-border"></div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th class="theme" width="20%"><div style="text-align:left;"></div></th>
+                  <th class="theme"><div>国内</div></th>
+                  <th class="theme"><div>香港</div></th>
+                  <th class="theme"><div>韩国</div></th>
+                  <th class="theme"><div>美国</div></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><div class="feature">机1房</div></td>
+                  <td>惠州/宿迁</td>
+                  <td>香港沙田</td>
+                  <td>韩国KT</td>
+                  <td>美国洛杉矶</td>
+                </tr>
+                <tr>
+                  <td><div class="feature">网络</div></td>
+                  <td>电信联通互联互通线路</td>
+                  <td>电信CN2直连，BGP国际多线</td>
+                  <td>BGP国际多线</td>
+                  <td>BGP国际多线</td>
+                </tr>
+                <tr>
+                  <td><div class="feature">带宽</div></td>
+                  <td>1000Mbps共享带宽</td>
+                  <td>1000Mbps共享带宽</td>
+                  <td>1000Mbps共享带宽</td>
+                  <td>1000Mbps共享带宽</td>
+                </tr>
+                <tr>
+                  <td><div class="feature">安全</div></td>
+                  <td>安全盾+金盾</td>
+                  <td>安全盾+金盾</td>
+                  <td>安全盾+金盾</td>
+                  <td>安全盾+金盾</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+
   </div>
 </template>
 
 <script>
   import des from '@/components/Describe.vue'
   import priceModel from '@/components/PriceModel.vue'
+  import FixedAside from '@/components/FixedAside.vue'
   import defaultPrice from '@/assets/data/cloudHostPrice'
 
   export default {
@@ -322,7 +385,8 @@
     props: ['line'],
     components: {
       des,
-      priceModel
+      priceModel,
+      FixedAside
     },
     computed: {
       prices () {
@@ -332,6 +396,8 @@
     data () {
       return {
         defaultPrice,
+        handleTop: false,
+        asideAnimate: '',
         serveDates: [
           {
             // 图片必须使用require来加载，否则会当成字符串处理
@@ -395,18 +461,53 @@
           require('../assets/img/icon/logo7.png'),
           require('../assets/img/icon/logo7.png'),
           require('../assets/img/icon/logo7.png')
+        ],
+        asideNavs: [
+          {
+            toSrc: '#content1',
+            text: '架构',
+            bgColor:"#496c97"
+          },
+          {
+            toSrc: '#content2',
+            text: '程序支持',
+            bgColor:"#5a5497"
+          },
+          {
+            toSrc: '#content3',
+            text: '开发支持',
+            bgColor:"#845097"
+          },
         ]
+      }
+    },
+    mounted() {
+      window.addEventListener('scroll', this.handleIsScroll)
+    },
+    methods:{
+      handleIsScroll(){
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        const offsetTop = document.querySelector('#content1').offsetTop
+        if (scrollTop > offsetTop){
+            this.asideAnimate = 'fadeIn'
+            this.handleTop = true
+        }
+        else
+          this.handleTop = false
       }
     }
   }
 </script>
 
 <style lang="stylus" scoped>
+
+
   #cloud-host
     .bg-light
       background-color white!important
     /*color white*/
     .content-title
+      text-align center
       padding-top 5rem
     .price-content
       width 80%

@@ -67,6 +67,7 @@ export default {
     justify-content center
     align-items center
   .title
+    text-align center
     width 50%
   .des-content
     margin-top 2rem

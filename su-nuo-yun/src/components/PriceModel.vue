@@ -38,6 +38,7 @@
     list-style none
     padding 0
   .price-model
+    text-align center
     background-color #f9f9f9
     border 1px solid #e5e5e5
     width 24%
