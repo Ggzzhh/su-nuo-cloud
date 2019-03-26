@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="224px"
+	 height="224px" viewBox="0 0 224 224" style="enable-background:new 0 0 224 224;" xml:space="preserve">
+<g id="Layer_267">
+	<g>
+		<g>
+			<circle style="fill:#FFB957;" cx="32" cy="32" r="28"/>
+			<circle style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" cx="32" cy="32" r="28"/>
+			<circle style="fill:#FFB957;" cx="192" cy="32" r="28"/>
+			<circle style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" cx="192" cy="32" r="28"/>
+			<circle style="fill:#FFFFFF;" cx="112" cy="112" r="108"/>
+			<circle style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" cx="112" cy="112" r="108"/>
+			<circle style="fill:#ACF0F2;" cx="112" cy="112" r="80"/>
+			<g>
+				<path style="fill:#F28C13;" d="M32,112c0,22.094,8.953,42.094,23.43,56.57L112,112V32C67.816,32,32,67.816,32,112z"/>
+			</g>
+			<g>
+				<path style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" d="M112,112l-56,56c-14.52-14.484-24-33.871-24-56
+					c0-44.184,35.816-80,80-80"/>
+			</g>
+			<circle style="fill:#FFFFFF;" cx="112" cy="112" r="16"/>
+			<circle style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" cx="112" cy="112" r="16"/>
+			<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" x1="116" y1="112" x2="108" y2="112"/>
+			<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" x1="36" y1="36" x2="24" y2="24"/>
+			<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" x1="200" y1="24" x2="188" y2="36"/>
+			<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" x1="112" y1="4" x2="112" y2="16"/>
+			<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" x1="4" y1="112" x2="16" y2="112"/>
+			<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" x1="220" y1="112" x2="208" y2="112"/>
+			<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" x1="112" y1="220" x2="112" y2="208"/>
+			<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" x1="36" y1="188" x2="4" y2="220"/>
+			<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-miterlimit:10;" x1="188" y1="188" x2="220" y2="220"/>
+		</g>
+	</g>
+</g>
+<g id="Layer_1">
+</g>
+</svg>

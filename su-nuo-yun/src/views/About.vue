@@ -1,13 +1,14 @@
 <template>
   <div class="about">
-    <fixed-aside bgColor="blue" text="测试用啦啦啦啦啦啦啦" src="#content3"></fixed-aside>
+    <collapse title="1" content="2" />
   </div>
 </template>
 
 <script>
   import FixedAside from '../components/FixedAside.vue'
+  import Collapse from "../components/Collapse";
   export default {
-    components: {FixedAside}
+    components: {Collapse, FixedAside}
   }
 </script>
 

@@ -318,51 +318,65 @@
         <div class="row">
           <h3 class="vice-title text-center">常见问题</h3>
           <div class="text-border"></div>
+
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="">
-              <table class="table table-bordered">
-                <thead>
-                <tr>
-                  <th class="theme" width="20%"><div style="text-align:left;"></div></th>
-                  <th class="theme"><div>国内</div></th>
-                  <th class="theme"><div>香港</div></th>
-                  <th class="theme"><div>韩国</div></th>
-                  <th class="theme"><div>美国</div></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td><div class="feature">机1房</div></td>
-                  <td>惠州/宿迁</td>
-                  <td>香港沙田</td>
-                  <td>韩国KT</td>
-                  <td>美国洛杉矶</td>
-                </tr>
-                <tr>
-                  <td><div class="feature">网络</div></td>
-                  <td>电信联通互联互通线路</td>
-                  <td>电信CN2直连，BGP国际多线</td>
-                  <td>BGP国际多线</td>
-                  <td>BGP国际多线</td>
-                </tr>
-                <tr>
-                  <td><div class="feature">带宽</div></td>
-                  <td>1000Mbps共享带宽</td>
-                  <td>1000Mbps共享带宽</td>
-                  <td>1000Mbps共享带宽</td>
-                  <td>1000Mbps共享带宽</td>
-                </tr>
-                <tr>
-                  <td><div class="feature">安全</div></td>
-                  <td>安全盾+金盾</td>
-                  <td>安全盾+金盾</td>
-                  <td>安全盾+金盾</td>
-                  <td>安全盾+金盾</td>
-                </tr>
-                </tbody>
-              </table>
+        <div class="container" >
+
+          <div class="row flex-row align-items-start">
+            <div class="col-md-6">
+              <div class="row">
+                <collapse
+                  title="硬盘/流量不够用，PHP云虚拟主机怎样升级？"
+                  content="<p>数掘科技主机均支持一键升级。您可在会员中心-产品管理项，自主选择更高型号，即可一键完成升级。升级过程只需补足差价。</p>"
+                />
+                <collapse
+                  title="我需要哪个地区的云虚拟主机？"
+                  content="<p>数掘科技主机存放在国内/香港/免备案等多节点。您需要的主机节点取决于您想实现的网站用途。</p><p>例如，您需要正规备案号，那么你唯一的选择是国内主机；如果您的网站面向北美和欧洲客户群，建议将网站存放在国外节点；如果您的网站面向除中国大陆外的亚太区客户，建议使用国外节点；如果您不想备案，且对大陆客户访问速度持有较高要求，那么免备案节点则是您满意的最佳托管环境。</p>"
+                />
+                <collapse
+                  title="SAS高速硬盘有哪些优势？"
+                  content="
+                    <p>数掘科技所有PHP云虚拟主机均使用SAS企业级硬盘，处理速度超过SSD硬盘两倍以上。通过采用Raid10阵列，提高服务器的处理速度和实现高速I/O。并且我们提供最大容量无限制套餐，大容量和通信速度都对应低价格。</p>
+                  "
+                />
+                <collapse
+                  title="SSL证书有什么用？怎样申领和安装？"
+                  content="<p>绝大多数网站未安装服务器安装证书，极容易导致信息被黑客截获，造成数据被窃取、篡改，避免流量劫持，成为钓鱼网站。SSL证书通过安全协议对数据使用密文传输，并可证明您的网站是安全可信的，可有效保护访客隐私和付款信息，有效提升网站可信度，进而提高产品销量，同时还能帮助提升网站的搜索引擎排名。</p>"
+                />
+                <collapse
+                  title="主机可以先试用吗？"
+                  content="<p>很抱歉，我们不提供主机试用服务。但是，您购买主机后的3天内，如有任何不满意，可随时申请按天退款。我们提供3天无条件退款保证，绝不以任何理由拒绝退款或收取服务费。</p>"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <collapse
+                title="付款后，我的主机多久能开通？"
+                content="<p>我们的云虚拟主机已为您配置资源和网络环境。付款成功即自动开通，无需等待。您只需解析域名、上传网站程序即可使用，我们强大的技术团队会负责网络的始终快速。</p>"
+              />
+                <collapse
+                  title="怎样把我自己的网站转入速诺云？"
+                  content="
+                <p>将您的网站转入数掘科技的过程非常简单。你需要获得您当前网站的全站备份，也就是网站副本，然后通过FTP软件(如FlashFXP等)上传到您的数掘科技主机。</p>
+                <p>如果您在转移过程中有任何疑问，我们的技术团队可随时为您提供支持，甚至为您代搬家，不收取任何服务费用。</p>
+              </div>"
+                />
+                <collapse
+                  title="如何使用PHP云虚拟主机创建网站？"
+                  content="<p>主机开通后，您需要将域名解析到您的主机IP地址，然后通过FTP（文件传输协议）将您的网站文件上传至主机。</p>"
+                />
+                <collapse
+                  title="主机默认是哪个PHP版本，可以更换吗？"
+                  content="<p>我们默认已安装最常用的PHP5.2/5.3/5.4/5.5/5.6/7.0/7.1版本。如需其他PHP版本，您可登录控制面板，在“更改设置”中自助切换到其他版本。或者，登录会员中心，使用“一键切换PHP版本”功能完成PHP版本切换。</p>"
+                />
+                <collapse
+                  title="我是新手，不会使用主机怎么办？"
+                  content="<p>更多问题，您可联系速诺云技术团队随时为您提供支持。</p>"
+                />
+
+
+              </div>
             </div>
           </div>
         </div>
@@ -377,6 +391,7 @@
 <script>
   import des from '@/components/Describe.vue'
   import priceModel from '@/components/PriceModel.vue'
+  import Collapse from '@/components/Collapse.vue'
   import FixedAside from '@/components/FixedAside.vue'
   import defaultPrice from '@/assets/data/cloudHostPrice'
 
@@ -384,6 +399,7 @@
     name: 'cloud-host',
     props: ['line'],
     components: {
+      Collapse,
       des,
       priceModel,
       FixedAside
@@ -478,6 +494,21 @@
             text: '开发支持',
             bgColor:"#845097"
           },
+          {
+            toSrc: '#content4',
+            text: '数据中心',
+            bgColor:"#97325b"
+          },
+          {
+            toSrc: '#content5',
+            text: '数据库',
+            bgColor:"#974e3e"
+          },
+          {
+            toSrc: '#content6',
+            text: '常见问题',
+            bgColor:"#7a9765"
+          },
         ]
       }
     },
@@ -487,7 +518,7 @@
     methods:{
       handleIsScroll(){
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-        const offsetTop = document.querySelector('#content1').offsetTop
+        const offsetTop = document.querySelector('#content1').offsetTop - 200
         if (scrollTop > offsetTop){
             this.asideAnimate = 'fadeIn'
             this.handleTop = true

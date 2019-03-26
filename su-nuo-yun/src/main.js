@@ -16,7 +16,7 @@ Vue.prototype.$scrollTo = function (e, target) {
     e.preventDefault()
 
   // 定位目标元素
-  const scrollPart = document.querySelector('#' + target)
+  const scrollPart = document.querySelector(target)
   // 获取目标元素顶端到屏幕的距离
   const top = scrollPart.getBoundingClientRect().top
   // 获取已滚动的距离
