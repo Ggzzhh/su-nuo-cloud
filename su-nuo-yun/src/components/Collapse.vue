@@ -38,7 +38,7 @@
     methods: {
       showContent(){
         if (this.h === '0') {
-          this.h = (this.content.length / 20 + 3) + 'rem'
+          this.h = (this.content.length / 18 + 5) + 'rem'
           this.iconT = 'rotate(90deg)'
         }
         else {

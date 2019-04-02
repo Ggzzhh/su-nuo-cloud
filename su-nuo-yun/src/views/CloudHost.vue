@@ -544,7 +544,7 @@
       width 80%
       padding-bottom 6rem
       display flex
-      justify-content space-between
+      justify-content space-around
       margin 0 auto
     .price-wrapper
       width 100%
