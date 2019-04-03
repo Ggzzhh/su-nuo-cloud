@@ -74,5 +74,6 @@ export default {
     width 50%
     height 30%
     color #e4ecee
-    font-size 1rem
+    font-size 1.2rem
+    text-indent 1rem
   </style>

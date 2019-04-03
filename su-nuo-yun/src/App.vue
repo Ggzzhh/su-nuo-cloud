@@ -10,7 +10,18 @@
           </div>
           <div class="nav" id="menu">
             <a href="/#slide">首页</a>
-            <a href="/cloud-host/GD">云虚拟主机</a>
+            <!--<a href="/cloud-host/GD">云虚拟主机</a>-->
+            <div class="">
+              <span>云虚拟主机</span>
+              <ul>
+                <li><a href="/cloud-host/GD">广东电信</a></li>
+                <li><a href="/cloud-host/JS">江苏电信</a></li>
+                <li><a href="/cloud-host/HK">香港高防</a></li>
+                <li><a href="/cloud-host/US">美国高防</a></li>
+                <li><a href="/cloud-host/HK2">香港无防</a></li>
+                <li><a href="/cloud-host/MZ">秒赞专用</a></li>
+              </ul>
+            </div>
             <router-link to="/about">云服务器</router-link>
             <router-link to="/">数据中心</router-link>
             <router-link to="/">服务器租用</router-link>
@@ -51,7 +62,7 @@
     width: 100%
     height: 4rem
     margin: 0
-    z-index: 100
+    z-index: 1001
     overflow: visible
     position: fixed
     top 0
@@ -78,13 +89,46 @@
         display: flex
         justify-content: space-around
         align-items: center
-        a
+        a, div
+          cursor pointer
           margin-left: 2rem
           text-decoration: none
           color: #8d8d8d
           font-weight: bold
           &:hover
             color #4fa1ff
+        div
+          /*overflow: hidden*/
+          position relative
+          height 100%
+          display flex
+          justify-content center
+          align-items center
+          ul
+            background-color #fff
+            z-index 1001
+            list-style none
+            position absolute
+            visibility hidden
+            top 4rem
+            left -1rem
+            text-align center
+            opacity 0
+            width 7rem
+            padding-bottom 1rem
+            padding-left 0
+            box-shadow 0 5px 3px 0 rgba(0,0,0,.4)
+            border-radius 0 0 5px 5px
+            transition all .3s ease-in-out
+            li
+              padding .5rem
+              font-size .9rem
+              a
+                margin 0
+          &:hover > ul
+            visibility visible
+            opacity 1
+
   .flex-middle
     display: flex
     flex-wrap: wrap
