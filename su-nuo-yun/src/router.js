@@ -20,7 +20,12 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "product" */ './views/CloudHost.vue')
+      component: () => import(/* webpackChunkName: "cloud-host" */ './views/CloudHost.vue')
+    },
+    {
+      path: '/cloud-serve',
+      name: 'cloud-serve',
+      component: () => import(/* webpackChunkName: "cloud-serve" */ './views/CloudServe.vue')
     },
     {
       path: '/about',

@@ -22,7 +22,7 @@
                 <li><a href="/cloud-host/MZ">秒赞专用</a></li>
               </ul>
             </div>
-            <router-link to="/about">云服务器</router-link>
+            <a href="/cloud-serve">云服务器</a>
             <router-link to="/">数据中心</router-link>
             <router-link to="/">服务器租用</router-link>
             <router-link to="/">平台与技术</router-link>
