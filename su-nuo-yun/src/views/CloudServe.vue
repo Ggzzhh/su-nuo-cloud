@@ -25,130 +25,166 @@
         <div class="flex-middle">
           <h2>选购专属云服务器</h2>
         </div>
-        <div class="container flex-middle" style="margin-left: -12rem">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <label for="line-select" class="input-group-text">线路</label>
+        <div class="flex-column">
+          <div class="container flex-middle" style="margin-left: -12rem">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label for="line-select" class="input-group-text">线路</label>
+              </div>
+              <select class="custom-select" name="line-select" id="line-select" disabled v-model="lineChoice">
+                <option value="电信">电信</option>
+              </select>
             </div>
-            <select class="custom-select" name="line-select" id="line-select" disabled>
-              <option value="电信">电信</option>
-            </select>
-          </div>
 
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <label for="config-select" class="input-group-text">配置</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label for="config-select" class="input-group-text">配置</label>
+              </div>
+              <select class="custom-select" name="config-select" id="config-select" disabled v-model="configNumber">
+                <option value="60">60G单机防御</option>
+              </select>
             </div>
-            <select class="custom-select" name="config-select" id="config-select" disabled>
-              <option value="60">60G单机防御</option>
-            </select>
-          </div>
 
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <label for="CPU-select" class="input-group-text">CPU</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label for="CPU-select" class="input-group-text">CPU</label>
+              </div>
+              <select class="custom-select" name="CPU-select" id="CPU-select" v-model="CPUNumber">
+                <option value="4">4 核</option>
+                <option value="8">8 核</option>
+                <option value="16">16 核</option>
+              </select>
             </div>
-            <select class="custom-select" name="CPU-select" id="CPU-select">
-              <option value="4">4 核</option>
-              <option value="8">8 核</option>
-              <option value="16">16 核</option>
-            </select>
-          </div>
 
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <label for="memory-select" class="input-group-text">内存</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label for="memory-select" class="input-group-text">内存</label>
+              </div>
+              <select class="custom-select" name="memory-select" id="memory-select" v-model="memoryNumber">
+                <option value="4">4 GB</option>
+                <option value="8">8 GB</option>
+                <option value="16">16 GB</option>
+              </select>
             </div>
-            <select class="custom-select" name="memory-select" id="memory-select">
-              <option value="4">4 GB</option>
-              <option value="8">8 GB</option>
-              <option value="16">16 GB</option>
-            </select>
-          </div>
 
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <label for="store-select" class="input-group-text">存储</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label for="store-select" class="input-group-text">存储</label>
+              </div>
+              <select class="custom-select" name="store-select" id="store-select" v-model="storeNumber">
+                <option value="30">30 GB</option>
+                <option value="60">60 GB</option>
+                <option value="80">80 GB</option>
+                <option value="100">100 GB</option>
+                <option value="150">150 GB</option>
+                <option value="300">300 GB</option>
+              </select>
             </div>
-            <select class="custom-select" name="store-select" id="store-select">
-              <option value="30">30 GB</option>
-              <option value="60">60 GB</option>
-              <option value="80">80 GB</option>
-              <option value="100">100 GB</option>
-              <option value="150">150 GB</option>
-              <option value="300">300 GB</option>
-            </select>
-          </div>
 
-          <div class="input-group slide">
-            <div class="input-group-prepend">
-              <label for="bandwidth-select" class="input-group-text">带宽</label>
-              <label class="input-group-text" style="min-width: 5.2rem">{{bandwidthNum}} MB</label>
+            <div class="input-group slide">
+              <div class="input-group-prepend">
+                <label for="bandwidth-select" class="input-group-text">带宽</label>
+                <label class="input-group-text" style="min-width: 5.2rem">{{bandwidthNum}} MB</label>
+              </div>
+              <input class="form-control"
+                     id="bandwidth-select"
+                     type="range"
+                     max="100"
+                     min="10"
+                     step="1"
+                     value=10
+                     v-model="bandwidthValue"
+              >
             </div>
-            <input class="form-control"
-                   id="bandwidth-select"
-                   type="range"
-                   max="100"
-                   min="0"
-                   step="1"
-                   value=10
-                   v-model="bandwidthValue"
-            >
-          </div>
 
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <label for="" class="input-group-text">流量</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label for="" class="input-group-text">流量</label>
+              </div>
+              <input class="form-control"
+                     type="text"
+                     value="不限"
+                     disabled
+              >
             </div>
-            <input class="form-control"
-                   type="text"
-                   value="不限"
-                   disabled
-            >
-          </div>
 
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <label for="IP-select" class="input-group-text">IP 地址</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label for="IP-select" class="input-group-text">IP 地址</label>
+              </div>
+              <select class="custom-select" name="IP-select" id="IP-select" v-model="IPNumber">
+                <option value=1>1 个</option>
+                <option value=2>2 个</option>
+                <option value=4>4 个</option>
+                <option value=8>8 个</option>
+                <option value=16>16 个</option>
+              </select>
             </div>
-            <select class="custom-select" name="IP-select" id="IP-select">
-              <option value="1">1 个</option>
-              <option value="2">2 个</option>
-              <option value="4">4 个</option>
-              <option value="8">8 个</option>
-              <option value="16">16 个</option>
-            </select>
-          </div>
 
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <label for="system-select" class="input-group-text">系统</label>
-              <button type="button"
-                      class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label for="system-select" class="input-group-text">系统</label>
+              </div>
+              <select class="custom-select" v-model="system" name="systems" id="systems" style="max-width: 10rem">
+                <option value="windows">windows</option>
+                <option value="linux">linux</option>
+              </select>
+              <select class="custom-select" name="system" id="system" v-model="systemChoice">
+                <option v-for="system in systems" :key="system.id" :value="system.name">{{system.name}}</option>
+              </select>
             </div>
-            <select class="custom-select" name="system-select" id="system-select">
-              <option value="30">30 GB</option>
-              <option value="60">60 GB</option>
-              <option value="80">80 GB</option>
-              <option value="100">100 GB</option>
-              <option value="150">150 GB</option>
-              <option value="300">300 GB</option>
-            </select>
-          </div>
 
+          </div>
+          <div class="config">
+            <h4 class="b-hr">当前配置</h4>
+            <div class="d-flex flex-column">
+              <div class="d-flex flex-row">
+                <div class="flex-left">线路：</div>
+                <div class="flex-right">{{lineChoice}}</div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="flex-left">配置：</div>
+                <div class="flex-right">{{configNumber}} GB单机防御</div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="flex-left">CPU：</div>
+                <div class="flex-right">{{CPUNumber}} 核</div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="flex-left">内存：</div>
+                <div class="flex-right">{{memoryNumber}} GB</div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="flex-left">存储：</div>
+                <div class="flex-right">{{storeNumber}} GB</div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="flex-left">带宽：</div>
+                <div class="flex-right">{{bandwidthValue}} MB</div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="flex-left">流量：</div>
+                <div class="flex-right">不限</div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="flex-left">IP数量：</div>
+                <div class="flex-right">{{IPNumber}} 个</div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="flex-left">系统：</div>
+                <div class="flex-right">{{systemChoice}}</div>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="flex-left">价格：</div>
+                <div class="flex-right"><b class="text-danger">{{price}} 元/月</b></div>
+              </div>
+              <div class="flex-middle mt-3">
+                <button class="btn btn-primary">立即购买</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--<choice-button-->
-          <!--id="c1"-->
-          <!--html="<p>test</p>"-->
-          <!--value="t1"-->
-          <!--:active="c1Active"-->
-          <!--@click="clicked"-->
-        <!--/>-->
+
       </div>
     </div>
   </div>
@@ -168,17 +204,111 @@
       clicked(e){
         const id = e.currentTarget.id
         this.$data[id + "Active"] = !this.$data[id + "Active"]
-      }
+      },
+
     },
     data(){
       return {
-        c1Active: false,
-        bandwidthValue: 10
+        lineChoice: '电信',
+        configNumber: '60',
+        IPNumber: '1',
+        CPUNumber: '4',
+        storeNumber: '30',
+        memoryNumber: '4',
+        bandwidthValue: 10,
+        windows: [
+          {
+            id: 1,
+            name: 'Windows 2003 R2'
+          },
+          {
+            id: 2,
+            name: 'Windows 2003 R2 64bit'
+          },
+          {
+            id: 3,
+            name: 'Windows 2003 R2 English'
+          },
+          {
+            id: 4,
+            name: 'Windows 2008 R2'
+          },
+          {
+            id: 5,
+            name: 'Windows 2008 R2 English'
+          },
+          {
+            id: 6,
+            name: 'Windows 7 32bit'
+          },
+          {
+            id: 7,
+            name: 'Windows 7 64bit'
+          },
+          {
+            id: 8,
+            name: 'Windows 2012 R2'
+          },
+          {
+            id: 9,
+            name: 'Windows XP SP3'
+          },
+          {
+            id: 10,
+            name: 'Windows 2016'
+          }
+        ],
+        linux: [
+          {
+            id: 1,
+            name: 'CentOS 7 32bit'
+          },
+          {
+            id: 2,
+            name: 'CentOS 7 64bit'
+          },
+          {
+            id: 3,
+            name: 'Debian 7 32bit'
+          },
+          {
+            id: 4,
+            name: 'Debian 7 64bit'
+          },
+          {
+            id: 5,
+            name: 'Ubuntu 12 32bit'
+          },
+          {
+            id: 6,
+            name: 'Ubuntu 14 64bit'
+          },
+          {
+            id: 7,
+            name: 'kangle3.5.10'
+          }
+        ],
+        system: 'windows',
+        systemChoice: ''
       }
     },
     computed:{
       bandwidthNum: function(){
         return Number(this.bandwidthValue).toFixed(0)
+      },
+      systems: function () {
+        this.systemChoice = this.system !== 'linux'? 'Windows 7 64bit': 'CentOS 7 64bit'
+        return this.system === 'linux'? this.linux: this.windows
+      },
+      price: function () {
+        const CPUPrice = Number(this.CPUNumber) * 15 - 60
+        const memoryPrice = Number(this.memoryNumber) * 30 - 120
+        const storePrice = Number(this.storeNumber) - 30
+        const bandwidthPrice = Number(this.bandwidthValue) * 20
+        const IPPrice = Number(this.IPNumber) * 100 - 100
+        const basePrice = 49
+
+        return basePrice + CPUPrice + memoryPrice + storePrice + bandwidthPrice + IPPrice
       }
     },
     watch: {
@@ -222,8 +352,21 @@
           animation upDownCloud2 5s ease-in-out infinite
     .serve-content
       padding 2rem
+      position relative
+      .config
+        position absolute
+        top 10rem
+        right 5rem
+        width 20rem
+        .d-flex
+          width 100%
+        .flex-left
+          min-width 5rem
+          text-align right
+        .flex-right
+          text-indent 2rem
     .input-group
-      margin 1rem
+      margin .7rem
       max-width 30rem
   #bandwidth-select
     border-left 1px solid rgba(206, 212, 218, 1)
