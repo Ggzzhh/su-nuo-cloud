@@ -34,12 +34,36 @@
           <a href="#" style="padding-right: 10rem">会员登录</a>
         </div>
       </div>
-      <!--<router-link to="/">Home</router-link> |-->
-      <!--<router-link to="/about">About</router-link>-->
     </div>
     <router-view class="mt4"/>
+    <div class="back-top" v-show="show">
+      <button class="btn btn-sm btn-primary" @click="$scrollTo($event, '.nav')">置顶</button>
+    </div>
   </div>
 </template>
+<script>
+  export default {
+    data(){
+      return {
+        show: false
+      }
+    },
+    mounted() {
+      window.addEventListener('scroll', this.handleIsScroll)
+    },
+    methods:{
+      handleIsScroll(){
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        const offsetTop = document.querySelector('#nav').offsetTop + 200
+        if (scrollTop > offsetTop){
+          this.show = true
+        }
+        else
+          this.show = false
+      }
+    }
+  }
+</script>
 <style lang="stylus" scoped>
   html
     width:100%
@@ -57,7 +81,11 @@
     color #2c3e50
   .mt4
     margin-top 4rem
-
+  .back-top
+    position fixed
+    bottom 1rem
+    right 1rem
+    transition all .5s ease-in-out
   #nav
     width: 100%
     height: 4rem

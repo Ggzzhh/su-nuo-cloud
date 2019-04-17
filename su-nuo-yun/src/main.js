@@ -20,9 +20,9 @@ Vue.prototype.$scrollTo = function (e, target) {
   // 获取目标元素顶端到屏幕的距离
   const top = scrollPart.getBoundingClientRect().top
   // 获取已滚动的距离
-  const pageY = window.pageYOffset
+  let pageY = window.pageYOffset
   // 得到目标元素的位置
-  const endPosition = top + pageY
+  let endPosition = top + pageY
 
   // + 相当于valueOf  获取开始时间
   const startTime = +new Date()
@@ -32,14 +32,21 @@ Vue.prototype.$scrollTo = function (e, target) {
   // 递归缓慢移动到目标位置
   function run() {
     const time = +new Date() - startTime;
+    if (top === 0) {
+      window.scrollTo(0, pageY - pageY * (time / duration));
+      endPosition = 0
+    }
+    else{
+      window.scrollTo(0, pageY + top * (time / duration));
+    }
 
-    window.scrollTo(0, pageY + top * (time / duration));
     run.timer = requestAnimationFrame(run);
-
     if (time >= duration) {
       window.scrollTo(0, endPosition);
       cancelAnimationFrame(run.timer);
     }
+
+
   }
   requestAnimationFrame(run);
 }
