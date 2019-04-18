@@ -23,7 +23,7 @@
               </ul>
             </div>
             <a href="/cloud-serve">云服务器</a>
-            <router-link to="/">数据中心</router-link>
+            <a href="/cloud-data">数据中心</a>
             <router-link to="/">服务器租用</router-link>
             <router-link to="/">平台与技术</router-link>
             <a href="/#about">联系我们</a>
@@ -37,7 +37,7 @@
     </div>
     <router-view class="mt4"/>
     <div class="back-top" v-show="show">
-      <button class="btn btn-sm btn-primary" @click="$scrollTo($event, '.nav')">置顶</button>
+      <button class="btn btn-sm btn-outline-dark" @click="$scrollTo($event, '.nav')">返回顶部</button>
     </div>
   </div>
 </template>

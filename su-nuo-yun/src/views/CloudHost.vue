@@ -532,7 +532,6 @@
 
 <style lang="stylus" scoped>
 
-
   #cloud-host
     .bg-light
       background-color white!important

@@ -6,7 +6,7 @@
         {{subTitle}}
       </span>
     </div>
-    <div class="des-content">
+    <div class="des-content" :style="contentStyle">
       {{describe}}
     </div>
   </div>
@@ -31,6 +31,9 @@ export default {
     styleModel: {
       type: String,
       default: 'default'
+    },
+    contentStyle: {
+      type: Object
     }
   },
   data () {
