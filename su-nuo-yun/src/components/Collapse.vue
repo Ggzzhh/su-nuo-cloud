@@ -8,7 +8,7 @@
         {{icon}}
       </div>
     </div>
-    <div class="c-content" :style="{height: h}">
+    <div class="c-content text-black-50" :style="{height: h}">
       <p></p>
       <div v-html="content"></div>
     </div>
@@ -38,7 +38,11 @@
     methods: {
       showContent(){
         if (this.h === '0') {
-          this.h = (this.content.length / 18 + 5) + 'rem'
+          const l = this.content.length
+          if (l > 100)
+            this.h = (l / 18 + 5) + 'rem'
+          else
+            this.h = (l / 18 + 3) + 'rem'
           this.iconT = 'rotate(90deg)'
         }
         else {
@@ -72,7 +76,7 @@
   .c-content
     text-indent 2rem
     overflow hidden
-    width 30rem
+    width 85%
     transition all .5s
 
 </style>

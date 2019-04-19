@@ -23,8 +23,7 @@
               </ul>
             </div>
             <a href="/cloud-serve">云服务器</a>
-            <a href="/cloud-data">数据中心</a>
-            <router-link to="/">服务器租用</router-link>
+            <a href="/cloud-data">服务器租用</a>
             <router-link to="/">平台与技术</router-link>
             <a href="/#about">联系我们</a>
           </div>

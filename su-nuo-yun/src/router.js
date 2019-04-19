@@ -25,7 +25,7 @@ export default new Router({
     {
       path: '/cloud-serve',
       name: 'cloud-serve',
-      component: () => import(/* webpackChunkName: "cloud-serve" */ './views/CloudServe.vue')
+      component: () => import(/* webpackChunkName: "cloud-serve" */ './views/RentServers.vue')
     },
     {
       path: '/cloud-data',
