@@ -24,14 +24,14 @@
             </div>
             <a href="/cloud-serve">云服务器</a>
             <a href="/cloud-data">服务器租用</a>
-            <router-link to="/">平台与技术</router-link>
+            <!--<a href="/reseller">代理计划</a>-->
             <a href="/#about">联系我们</a>
           </div>
         </div>
 
-        <div class="nav">
-          <a href="#" style="padding-right: 10rem">会员登录</a>
-        </div>
+        <!--<div class="nav">-->
+          <!--<a href="#" style="padding-right: 10rem">会员登录</a>-->
+        <!--</div>-->
       </div>
     </div>
     <router-view class="mt4"/>

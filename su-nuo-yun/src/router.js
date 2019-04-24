@@ -31,6 +31,11 @@ export default new Router({
       path: '/cloud-data',
       name: 'cloud-data',
       component: () => import(/* webpackChunkName: "cloud-data" */ './views/CloudData.vue')
+    },
+    {
+      path: '/reseller',
+      name: 'reseller',
+      component: () => import(/* webpackChunkName: "reseller" */ './views/Reseller.vue')
     }
   ]
 })
