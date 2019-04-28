@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="240px"
+	 height="256px" viewBox="0 0 240 256" style="enable-background:new 0 0 240 256;" xml:space="preserve">
+<g id="Layer_213">
+	<g>
+		<g>
+			<g>
+				<circle style="fill:#F28C13;" cx="120" cy="172" r="20"/>
+				<circle style="fill:#FFB957;" cx="120" cy="172" r="12"/>
+			</g>
+			<g>
+				<path style="fill:none;stroke:#4D5152;stroke-width:8;stroke-linejoin:round;stroke-miterlimit:10;" d="M120,200v24
+					c0,15.465-12.535,28-28,28s-28-12.535-28-28"/>
+				
+					<line style="fill:none;stroke:#4D5152;stroke-width:8;stroke-linejoin:round;stroke-miterlimit:10;" x1="120" y1="108" x2="120" y2="144"/>
+				<path style="fill:#67DDE0;" d="M216,108c11.047,0,20,12,20,12C236,55.938,184.063,4,120,4S4,55.938,4,120c0,0,8.953-12,20-12
+					s20,12,20,12s10.746-12,24-12s24,12,24,12s12.535-12,28-12s28,12,28,12s10.746-12,24-12s24,12,24,12S204.953,108,216,108z"/>
+				<path style="fill:none;stroke:#4D5152;stroke-width:8;stroke-linejoin:round;stroke-miterlimit:10;" d="M4,120
+					C4,55.938,55.938,4,120,4s116,51.938,116,116"/>
+				<path style="fill:none;stroke:#4D5152;stroke-width:8;stroke-linejoin:round;stroke-miterlimit:10;" d="M44,120
+					C44,55.938,76,4,120,4s76,51.938,76,116"/>
+				<path style="fill:none;stroke:#4D5152;stroke-width:8;stroke-linejoin:round;stroke-miterlimit:10;" d="M92,120
+					c0-64.063,8-116,28-116s28,51.938,28,116"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Layer_1">
+</g>
+</svg>
